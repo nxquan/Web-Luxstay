@@ -1,0 +1,109 @@
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
+    .header {
+        justify-content: center;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__input-wrap {
+        flex: 1;
+        width: 180px;
+    }
+    .header__bars {
+        display: block;
+    }
+    .header__bars-input {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .header__bars-input:checked ~ .header__nav {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    .header__bars-input:checked ~ .header__overlay {
+        opacity: 1;
+        display: block;
+    }
+    .header__nav {
+        position: fixed;
+        left: 0;
+        top: var(--header-height);
+        bottom: 0;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.4s linear;
+        background-color: #fff;
+        z-index: 99;
+        border-radius: 4px;
+    }
+    .header__nav-close  {
+        display: block;
+        font-size: 2.6rem;
+        position: absolute;
+        right: 20px;
+        top: 9px;
+        cursor: pointer;
+    }
+    .header__nav-list {
+        width: 100%;
+        margin-top: 40px;
+        padding-left: 16px;
+    }
+    .header__nav-item,
+    .header__nav-link {
+        display: block;
+    }
+    .header__nav-link {
+        font-size: 1.6rem;
+    }
+    .header__nav-item + .header__nav-item {
+        margin-top: 12px;
+    }
+    .header__nav-item + .header__nav-item {
+        margin-left: 0;
+    }
+    .languages {
+        width: calc(100% - 32px);
+        margin-top: 20px;
+        margin-left: 16px;
+        height: 48px;
+    }
+    .languages__icon {
+        display:block;
+        margin-left: auto;
+        margin-right: 8px;
+    }
+    .circle::before {
+        right: 84%;
+    }
+    .popover {
+        min-width: 278px;
+    }
+}
+/* Mobile */
+@media (max-width: 739px) {
+    .header__logo-link  {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px) {
+    .slider-offer .carouse-actions {
+        display: flex;
+    }
+    .app-introduce {
+        margin: 0px 0;
+    }
+    .app-introduce-download {
+        margin-top: 30px;
+    }
+    .app-home {
+        margin: 24px 0;
+    }
+}
